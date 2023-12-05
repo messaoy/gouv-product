@@ -1,43 +1,47 @@
-import React from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-
+import React from 'react';
+import './index.css';
 import {
   AppBar,
   Breadcrumbs,
   Container,
-  IconButton,
   Link,
   Toolbar,
   Typography,
 } from "@mui/material";
 import DataTable from "./components/DataTable";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import ServiceDetails from "./components/ServiceDetails";
 
 function App() {
+
   return (
     <Container>
-      <AppBar position="static">
+      <AppBar position="fixed" sx={{
+          width: '100vw',
+          top: '0',
+          left: '0',
+      }}>
         <Toolbar variant="dense">
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography variant="h6" color="inherit" component="div">
-            Template
+              <Link href="/" id='logo'>
+                  Mission Apprentissage
+              </Link>
           </Typography>
         </Toolbar>
       </AppBar>
-      <Breadcrumbs aria-label="breadcrumb">
-        <Link underline="hover" color="inherit" href="/">
-          Home
+      <Breadcrumbs aria-label="breadcrumb" sx={{ paddingBottom: '1rem', paddingLeft: '1rem', paddingRight: '1rem'}}>
+        <Link href="/">
+          Accueil
         </Link>
-        <Typography color="text.primary">Results</Typography>
+        <Typography color="text.primary">Liste des services</Typography>
       </Breadcrumbs>
       <Container>
-        <DataTable />
+          <Router>
+              <Routes>
+                  <Route path="/" Component={DataTable} />
+                  <Route path="/service/:serviceId" Component={ServiceDetails} />
+              </Routes>
+          </Router>
       </Container>
     </Container>
   );
