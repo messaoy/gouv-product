@@ -1,27 +1,32 @@
-# Template Entretien
+# Mission Apprentissage
 
-This is a mono-repo template containing two projects: `api` and `app`.
+
 
 ## Description
 
-The `api` project is a server built with Express and TypeScript, while the `app` project is a simple React application created using create-react-app with Material-UI and TypeScript.
+Le projet "Mission Apprentissage" est une application web complète basée sur une architecture de mono-repo, intégrant une API développée avec Node.js et une interface utilisateur construite avec React en utilisant TypeScript.
 
+L'objectif principal de l'application est de présenter une liste détaillée des fiches produits liées à la Mission Apprentissage. Chaque fiche produit inclut des informations essentielles sur les différents établissements de formation et leurs offres d'apprentissage.
+
+   Ce projet est actuellement en MVP, seul les fonctions essentielles sont présentes.
 ## Installation
 
-1. Clone the repository:
+1. Cloner le repertoire:
    ```bash
-   git clone https://github.com/mission-apprentissage/template-entretien.git
+   git clone https://github.com/messaoy/gouv-product.git
    ```
-2. Navigate to the project directory:
+2. Aller dans le dossier du projet:
    ```bash
    cd your-repo
    ```
-3. Install dependencies for both projects:
+3. Installer les dépendances pour les deux projets:
    ```bash
    cd api && npm install
    cd ../app && npm install
    ```
 
-## Usage
-
-See in respective README.md
+4. Créer un fichier .env à partir des fichiers templates et mettre les variables:
+   ```bash
+   cd api && cp .env .env.template
+   cd ../app && cp .env .env.template
+   ```

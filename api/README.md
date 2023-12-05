@@ -1,33 +1,7 @@
-# Project Name
+## Scripts Disponibles
 
-## Description
-A simple API project built with Express and TypeScript.
+Dans le répertoire du projet, vous pouvez exécuter :
 
-## Installation
-Install dependencies: `npm install`
+### `npm start`
 
-## Usage
-### Development
-To run the project in development mode with automatic restart on file changes, use the following command:
-
-```bash
-npm start
-```
-
-This command uses `tsup-node` to transpile and bundle TypeScript code and starts the server with nodemon.
-
-### Build
-To build the project for production, use the following command:
-
-```bash
-npm run build
-```
-
-This command transpiles and bundles the TypeScript code into the `dist` directory.
-
-### Start
-To start the server in production mode, use the following command:
-
-```bash
-node dist/index.js
-```
+Pour lancer l'application en mode développement
