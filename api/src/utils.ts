@@ -11,7 +11,7 @@ export const englishToFrench = {
     repository: 'Code source',
     contact: 'Contact',
     stats_url: 'Lien vers les statistiques',
-    stats: 'Statistiques d\'usage',
+    'stats:': 'Statistiques d\'usage',
     true:'Présente',
     events: 'Evenements',
     phases: 'Etapes',
