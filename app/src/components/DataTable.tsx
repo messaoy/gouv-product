@@ -15,7 +15,7 @@ const columns: GridColDef[] = [
         sortable: false,
         width: 550,
         // on pourrait utiliser le slug, il est présent dans l'objet actuellement mais pas pour tout les services
-        renderCell: (params: GridRenderCellParams) => (<Link to={`/service/${params.row.id}`} state={{content: params.row.content}}> {params.value}</Link>)
+        renderCell: (params: GridRenderCellParams) => (<Link to={`/service/${params.row.id}`} state={{content: params.row.content, status: params.row.status}}> {params.value}</Link>)
     },
     {
         field: 'status',
