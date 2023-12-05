@@ -1,20 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import CssBaseline from "@mui/material/CssBaseline";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import CssBaseline from '@mui/material/CssBaseline';
 // https://mui.com/x/react-data-grid/getting-started/#typescript
 import type {} from '@mui/x-data-grid/themeAugmentation';
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+  document.getElementById('root') as HTMLElement,
 );
 
 root.render(
   <React.StrictMode>
     <CssBaseline />
       <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
