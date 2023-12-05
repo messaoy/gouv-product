@@ -26,9 +26,17 @@ export const englishToFrench = {
 
 };
 
-export const replaceWordsWithFrench = (input, translations) => {
+export const replaceWordsWithFrench = (input, translations): string => {
   return Object.entries(translations).reduce((output, [englishWord, frenchWord]) => {
     const regex = new RegExp(`\\b${englishWord}\\b`, 'g');
     return output.replace(regex, frenchWord);
   }, input);
 };
+
+export const decodeContentFromMd = (content: string): [{
+  status: string;
+  url: string }] =>{
+  const decodedContent = Buffer.from(content, 'base64').toString('utf-8');
+  return JSON.parse(decodedContent);
+};
+
