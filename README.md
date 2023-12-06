@@ -8,7 +8,7 @@ Le projet "Mission Apprentissage" est une application web complète basée sur u
 
 L'objectif principal de l'application est de présenter une liste détaillée des fiches produits liées à la Mission Apprentissage. Chaque fiche produit inclut des informations essentielles sur les différents établissements de formation et leurs offres d'apprentissage.
 
-   Ce projet est actuellement en MVP, seul les fonctions essentielles sont présentes.
+   Ce projet est actuellement en V1.
 ## Installation
 
 1. Cloner le repertoire:

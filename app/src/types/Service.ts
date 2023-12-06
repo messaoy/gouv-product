@@ -1,8 +1,8 @@
 export interface Service {
-    id: number;
-    title: string;
-    status: string;
-    slug: string;
-    content: string;
+  id: number;
+  title: string;
+  status: string;
+  details: string;
+  content: string;
 }
 

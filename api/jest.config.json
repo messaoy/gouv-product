@@ -1,0 +1,15 @@
+{
+  "testEnvironment": "node",
+  "roots": [
+    "<rootDir>/test"
+  ],
+  "preset": "ts-jest",
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/types/",
+    "/dist/"
+  ],
+  "transform": {
+    "^.+\\.ts?$": "ts-jest"
+  }
+}

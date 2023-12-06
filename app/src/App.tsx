@@ -7,19 +7,19 @@ import {
   Link,
   Toolbar,
   Typography,
-} from "@mui/material";
-import DataTable from "./components/DataTable";
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import ServiceDetails from "./components/ServiceDetails";
+} from '@mui/material';
+import DataTable from './components/DataTable';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ServiceDetails from './components/ServiceDetails';
 
 function App() {
 
   return (
     <Container>
       <AppBar position="fixed" sx={{
-          width: '100vw',
-          top: '0',
-          left: '0',
+        width: '100vw',
+        top: '0',
+        left: '0',
       }}>
         <Toolbar variant="dense">
           <Typography variant="h6" color="inherit" component="div">
@@ -29,7 +29,10 @@ function App() {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Breadcrumbs aria-label="breadcrumb" sx={{ paddingBottom: '1rem', paddingLeft: '1rem', paddingRight: '1rem'}}>
+        {/*
+        TODO: Faire marcher le breadcrum lorsque l'on est sur une page
+        */}
+      <Breadcrumbs aria-label="breadcrumb" sx={{ paddingBottom: '1rem', paddingLeft: '1rem', paddingRight: '1rem' }}>
         <Link href="/">
           Accueil
         </Link>
@@ -39,6 +42,9 @@ function App() {
           <Router>
               <Routes>
                   <Route path="/" Component={DataTable} />
+{/*
+                  on pourrait utiliser le slug, il est présent dans l'objet actuellement mais pas pour tout les services....
+*/}
                   <Route path="/service/:serviceId" Component={ServiceDetails} />
               </Routes>
           </Router>
