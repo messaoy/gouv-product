@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CssBaseline from '@mui/material/CssBaseline';
-// https://mui.com/x/react-data-grid/getting-started/#typescript
 import type {} from '@mui/x-data-grid/themeAugmentation';
 
 const root = ReactDOM.createRoot(

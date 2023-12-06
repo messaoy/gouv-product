@@ -29,6 +29,9 @@ function App() {
           </Typography>
         </Toolbar>
       </AppBar>
+        {/*
+        TODO: Faire marcher le breadcrum lorsque l'on est sur une page
+        */}
       <Breadcrumbs aria-label="breadcrumb" sx={{ paddingBottom: '1rem', paddingLeft: '1rem', paddingRight: '1rem' }}>
         <Link href="/">
           Accueil
@@ -39,6 +42,9 @@ function App() {
           <Router>
               <Routes>
                   <Route path="/" Component={DataTable} />
+{/*
+                  on pourrait utiliser le slug, il est présent dans l'objet actuellement mais pas pour tout les services....
+*/}
                   <Route path="/service/:serviceId" Component={ServiceDetails} />
               </Routes>
           </Router>
