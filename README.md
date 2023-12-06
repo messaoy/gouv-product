@@ -6,7 +6,7 @@
 
 Le projet "Mission Apprentissage" est une application web complète basée sur une architecture de mono-repo, intégrant une API développée avec Node.js et une interface utilisateur construite avec React en utilisant TypeScript.
 
-L'objectif principal de l'application est de présenter une liste détaillée des services numériques liées à la Mission Apprentissage. Chaque fiche inclut des informations essentielles sur les différents services en question de formation.
+L'objectif principal de l'application est de présenter une liste détaillée des services numériques liées à la Mission Apprentissage. Chaque fiche inclut des informations essentielles sur les différents services en question.
 
    Ce projet est actuellement en V1.
 ## Installation
