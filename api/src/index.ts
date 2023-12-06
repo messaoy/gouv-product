@@ -1,5 +1,5 @@
 import express, { Express } from 'express';
-import { serviceRouter } from '../router/serviceRouter';
+import { serviceRouter } from '../router/service.router';
 
 const app: Express = express();
 const cors = require('cors');

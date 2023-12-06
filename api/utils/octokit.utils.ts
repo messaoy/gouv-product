@@ -5,8 +5,9 @@ interface Headers {
   [key: string]: string;
 }
 
-type GouvReposResponse =
-    Endpoints['GET /repos/{owner}/{repo}']['response'];
+export type GouvReposResponse =
+    Endpoints['GET /repos/{owner}/{repo}/contents/{path}']['response'];
+
 
 export class OctokitUtils {
   private octokit: Octokit;
@@ -20,7 +21,7 @@ export class OctokitUtils {
     this.headers = { 'X-GitHub-Api-Version': '2022-11-28' };
   }
 
-  async getRequest(owner: string, repo: string, path: string): Promise<GouvReposResponse['data']> {
+  async getRequest(owner: string, repo: string, path: string): Promise<string> {
     const headers = this.headers;
     try {
       const response: GouvReposResponse = await this.octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
@@ -30,9 +31,9 @@ export class OctokitUtils {
         headers,
       });
 
-      return response.data;
+      return response?.data?.content ? response.data.content : '';
     } catch (error) {
-      console.error('Erreur lors de la récupération des produits Mission Apprentissage:', error.message);
+      console.error('Erreur lors de la récupération des produits Mission Apprentissage:', error);
       throw error;
     }
   }
